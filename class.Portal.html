@@ -447,10 +447,7 @@ with some pre-filled&nbsp;information.</p>
           <div class="docblock">
             <p>Finishes the get-user-information request, and returns
 the result in the form of a <code>GVariant</code> dictionary containing
-the following fields:
-- id <code>s</code>: the user <span class="caps">ID</span>
-- name <code>s</code>: the users real name
-- image <code>s</code>: the uri of an image file for the users avatar&nbsp;picture.</p>
+the following&nbsp;fields:</p>
           </div>
           
         </div>
@@ -520,11 +517,7 @@ the result in the form of a&nbsp;boolean.</p>
           <div class="docblock">
             <p>Finishes the open-file request, and returns
 the result in the form of a <code>GVariant</code> dictionary containing
-the following fields:
-- uris <code>as</code>: an array of strings containing the uris of selected files
-- choices <code>a(ss)</code>: an array of pairs of strings, the first string being the
-    <span class="caps">ID</span> of a combobox that was passed into this call, the second string
-    being the selected&nbsp;option.</p>
+the following&nbsp;fields:</p>
           </div>
           
         </div>
@@ -587,11 +580,7 @@ red, green and blue components in the range&nbsp;[0,1].</p>
           <h6><a href="method.Portal.prepare_print_finish.html">xdp_portal_prepare_print_finish</a></h6>
           <div class="docblock">
             <p>Finishes the prepare-print request, and returns <code>GVariant</code> dictionary
-with the following information:
-- settings <code>a{sv}</code>: print settings as set up by the user in the print dialog
-- page-setup <code>a{sv}: page setup as set up by the user in the print dialog
-- token u: a token that can by used in a</code>xdp_portal_print_file()` call to
-    avoid the print&nbsp;dialog.</p>
+with the following&nbsp;information:</p>
           </div>
           
         </div>
@@ -649,11 +638,7 @@ with the following information:
           <div class="docblock">
             <p>Finishes the save-file request, and returns
 the result in the form of a <code>GVariant</code> dictionary containing
-the following fields:
-- uris <code>(as)</code>: an array of strings containing the uri of the selected file
-- choices <code>a(ss)</code>: an array of pairs of strings, the first string being the
-  <span class="caps">ID</span> of a combobox that was passed into this call, the second string
-  being the selected&nbsp;option.</p>
+the following&nbsp;fields:</p>
           </div>
           
         </div>
@@ -676,14 +661,7 @@ return that&nbsp;instead.</p>
           <div class="docblock">
             <p>Finishes the save-files request, and returns
 the result in the form of a <code>GVariant</code> dictionary containing
-the following fields:
-- uris <code>(as)</code>: an array of strings containing the uri corresponding to each
-  file passed to the save-files request, in the same order. Note that the
-  file names may have changed, for example if a file with the same name in
-  the selected folder already exists.
-- choices <code>a(ss)</code>: an array of pairs of strings, the first string being the
-  <span class="caps">ID</span> of a combobox that was passed into this call, the second string
-  being the selected&nbsp;option.</p>
+the following&nbsp;fields:</p>
           </div>
           
         </div>

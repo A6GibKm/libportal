@@ -254,22 +254,26 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 
       <div class="docblock">
         <p>Sends a desktop&nbsp;notification.</p>
-<p>The following keys may be present in <code>notification</code>:
-- title <code>s</code>: a user-visible string to display as title
-- body <code>s</code>: a user-visible string to display as body
-- icon <code>v</code>: a serialized icon (in the format produced by <a href="javascript:void(0)" data-namespace="Gio" data-link="method.Icon.serialize.html" class="external"><code>g_icon_serialize()</code></a>)
-- priority <code>s</code>: &#8220;low&#8221;, &#8220;normal&#8221;, &#8220;high&#8221; or &#8220;urgent&#8221;
-- default-action <code>s</code>: name of an action that
-    will be activated when the user clicks on the notification
-- default-action-target <code>v</code>: target parameter to send along when
-    activating the default action.
-- buttons <code>aa{sv}</code>: array of serialized&nbsp;buttons</p>
-<p>Each serialized button is a dictionary with the following supported keys:
-- label <code>s</code>: user-visible lable for the button. Mandatory
-- action <code>s</code>: name of an action that will be activated when
-    the user clicks on the button. Mandatory
-- target <code>v</code>: target parameter to send along when activating
-    the&nbsp;button</p>
+<p>The following keys may be present in <code>notification</code>:</p>
+<ul>
+<li>title <code>s</code>: a user-visible string to display as&nbsp;title</li>
+<li>body <code>s</code>: a user-visible string to display as&nbsp;body</li>
+<li>icon <code>v</code>: a serialized icon (in the format produced by <a href="javascript:void(0)" data-namespace="Gio" data-link="method.Icon.serialize.html" class="external"><code>g_icon_serialize()</code></a>)</li>
+<li>priority <code>s</code>: &#8220;low&#8221;, &#8220;normal&#8221;, &#8220;high&#8221; or&nbsp;&#8220;urgent&#8221;</li>
+<li>default-action <code>s</code>: name of an action that
+    will be activated when the user clicks on the&nbsp;notification</li>
+<li>default-action-target <code>v</code>: target parameter to send along when
+    activating the default&nbsp;action.</li>
+<li>buttons <code>aa{sv}</code>: array of serialized&nbsp;buttons</li>
+</ul>
+<p>Each serialized button is a dictionary with the following supported&nbsp;keys:</p>
+<ul>
+<li>label <code>s</code>: user-visible lable for the button.&nbsp;Mandatory</li>
+<li>action <code>s</code>: name of an action that will be activated when
+    the user clicks on the button.&nbsp;Mandatory</li>
+<li>target <code>v</code>: target parameter to send along when activating
+    the&nbsp;button</li>
+</ul>
 <p>Actions with a prefix of &#8220;app.&#8221; are assumed to be exported by the
 application and will be activated via the org.freedesktop.Application
 interface, others are activated by emitting the

@@ -250,11 +250,13 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 
       <div class="docblock">
         <p>Finishes the prepare-print request, and returns <a href="javascript:void(0)" data-namespace="GLib" data-link="struct.Variant.html" class="external"><code>GVariant</code></a> dictionary
-with the following information:
-- settings <code>a{sv}</code>: print settings as set up by the user in the print dialog
-- page-setup <code>a{sv}: page setup as set up by the user in the print dialog
-- token u: a token that can by used in a &lt;a href="method.Portal.print_file.html"&gt;</code>xdp_portal_print_file()`</a> call to
-    avoid the print&nbsp;dialog.</p>
+with the following&nbsp;information:</p>
+<ul>
+<li>settings <code>a{sv}</code>: print settings as set up by the user in the print&nbsp;dialog</li>
+<li>page-setup `a{sv}: page setup as set up by the user in the print&nbsp;dialog</li>
+<li>token u: a token that can by used in a <a href="method.Portal.print_file.html"><code>xdp_portal_print_file()</code></a> call to
+    avoid the print&nbsp;dialog.</li>
+</ul>
       </div>
 
       <div class="docblock">
