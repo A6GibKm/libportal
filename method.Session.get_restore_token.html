@@ -172,8 +172,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 
       <div class="docblock">
         <p>Retrieves the restore token of <code>session</code>.</p>
-<p>A restore token will only be available if <code>XDP_PERSIST_MODE_TRANSIENT</code>
-or <code>XDP_PERSIST_MODE_PERSISTENT</code> was passed when creating the screencast&nbsp;session.</p>
+<p>A restore token will only be available if [<code>XDP_PERSIST_MODE_TRANSIENT</code>]<a href="enum.PersistMode.html"><code>XdpPersistMode</code></a>
+or [<code>XDP_PERSIST_MODE_PERSISTENT</code>]<a href="enum.PersistMode.html"><code>XdpPersistMode</code></a> was passed when creating the screencast&nbsp;session.</p>
 <p>Remote desktop sessions cannot be&nbsp;restored.</p>
 <p>May only be called after <code>session</code> is successfully started, i.e. after
 <a href="method.Session.start_finish.html"><code>xdp_session_start_finish()</code></a>.</p>
