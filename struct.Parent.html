@@ -136,10 +136,10 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <p>Parent window&nbsp;abstraction.</p>
 <p>The <a href="struct.Parent.html"><code>XdpParent</code></a> struct provides an abstract way to represent
 a window, without introducing a dependency on a toolkit&nbsp;library.</p>
-<p>An XdpParent implementation for <span class="caps">GTK</span>+ is included in the
-portal-gtk.h header file, in the form of inline functions.
-To create a XdpParent for a <span class="caps">GTK</span>+ window, use
-[ctor@Parent.<code>new_gtk()</code>].</p>
+<p>An XdpParent implementation for <span class="caps">GTK</span> is included in the
+<code>portal-gtk3.h</code> and <code>portal-gtk4.h</code> header files, in the form of inline functions.
+To create a XdpParent for a <span class="caps">GTK</span> window, use
+<code>xdp_parent_new_gtk()</code>.</p>
         </div>
 
         
