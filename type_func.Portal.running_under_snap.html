@@ -13,7 +13,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Xdp.OpenFileFlags</title>
+  <title>Xdp.Portal.running_under_snap</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -29,10 +29,10 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
 
   
-  <meta property="og:title" content="Xdp.OpenFileFlags"/>
-  <meta property="og:description" content="Reference for Xdp.OpenFileFlags"/>
-  <meta name="twitter:title" content="Xdp.OpenFileFlags"/>
-  <meta name="twitter:description" content="Reference for Xdp.OpenFileFlags"/>
+  <meta property="og:title" content="Xdp.Portal.running_under_snap"/>
+  <meta property="og:description" content="Reference for Xdp.Portal.running_under_snap"/>
+  <meta name="twitter:title" content="Xdp.Portal.running_under_snap"/>
+  <meta name="twitter:description" content="Reference for Xdp.Portal.running_under_snap"/>
 
 
   
@@ -82,12 +82,21 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a class="current" href="flags.OpenFileFlags.html">OpenFileFlags</a>
+    <a href="class.Portal.html">Portal</a>
   </div>
 </div>
-
-
-
+<div class="section">
+  <h5>Functions</h5>
+  <div class="links">
+  
+    <a class="method" href="type_func.Portal.running_under_flatpak.html">running_under_flatpak</a>
+  
+    <a class="method" href="type_func.Portal.running_under_sandbox.html">running_under_sandbox</a>
+  
+    <a class="method current" href="type_func.Portal.running_under_snap.html">running_under_snap</a>
+  
+  </div>
+</div>
 
     </nav>
     
@@ -96,38 +105,47 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     
 <section id="main" class="content">
   <header>
-    <h3>Enumeration</h3>
-    <h1><a href="index.html">Xdp</a><span class="sep"></span>OpenFileFlags</h1>
+    <h3>Function</h3>
+    <h1><a href="index.html">Xdp</a><span class="sep"></span><a href="class.Portal.html">Portal</a><span class="sep"></span>running_under_snap</h1>
   </header>
 
   <section>
     <div class="declaration toggle-wrapper">
-      <h4 style="display:flex;" id="declaration">
+      <h4 id="declaration" style="display:flex;">
         Declaration
         <a href="#declaration" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://flatpak.github.io/libportal/docs/libportal/portal-helpers.h#L42">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <pre><code>flags Xdp.OpenFileFlags</code></pre>
+        <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span>
+<span class="n">xdp_portal_running_under_snap</span> <span class="p">(</span>
+  <span class="kt">void</span>
+  <span class="n">GError</span><span class="o">**</span> <span class="n">error</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
       </div>
     </div>
 
     <div class="description toggle-wrapper">
-      <h4 style="display:flex;" id="description">
+      <h4 id="description" style="display:flex;">
         Description
         <a href="#description" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://flatpak.github.io/libportal/docs/libportal/filechooser.h#L26">[src]</a>
+        <a class="srclink" title="go to source location" href="https://flatpak.github.io/libportal/docs/libportal/portal.c#L393">[src]</a>
         
       </h4>
 
       <div class="docblock">
-      <p>Options for opening&nbsp;files.</p>
+        <p>Detects if you are running inside of a Snap&nbsp;sandbox.</p>
+<p>See also: <code>xdp_portal_running_under_sandbox()</code></p>
       </div>
 
       <div class="docblock">
-        <table class="attributes">
+        <table>
           
           
           
@@ -137,37 +155,37 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
       
     </div>
 
-    <div class="members toggle-wrapper">
-      <h4 id="members">
-        Members
-        <a href="#members" class="anchor"></a>
+    
+
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
       </h4>
 
       <div class="docblock">
-      <table class="enum-members">
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-      
-        <tr>
-          <td><code title="Value: 0">XDP_OPEN_FILE_FLAG_NONE</code></td>
-          <td><p>No&nbsp;options.</p></td>
-        </tr>
-      
-        <tr>
-          <td><code title="Value: 1">XDP_OPEN_FILE_FLAG_MULTIPLE</code></td>
-          <td><p>Allow selecting multiple&nbsp;files.</p></td>
-        </tr>
-      
-      </table>
+        <table class="returns">
+          <tr class="arg-name">
+            <td>Returns:</td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p><code>TRUE</code> if the current process is running under a Snap sandbox, or
+  <code>FALSE</code> if either unsandboxed or an error was encountered in which case
+  <code>error</code> will be&nbsp;set.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+        </table>
       </div>
     </div>
-
     
-
-    
-
   </section>
 </section>
 

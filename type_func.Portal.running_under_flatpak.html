@@ -13,7 +13,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Xdp.Parent.free</title>
+  <title>Xdp.Portal.running_under_flatpak</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta charset="utf-8" />
@@ -29,10 +29,10 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
   
 
   
-  <meta priority="og:title" content="Xdp.Parent.free"/>
-  <meta priority="og:description" content="Reference for Xdp.Parent.free"/>
-  <meta name="twitter:title" content="Xdp.Parent.free"/>
-  <meta name="twitter:description" content="Reference for Xdp.Parent.free"/>
+  <meta property="og:title" content="Xdp.Portal.running_under_flatpak"/>
+  <meta property="og:description" content="Reference for Xdp.Portal.running_under_flatpak"/>
+  <meta name="twitter:title" content="Xdp.Portal.running_under_flatpak"/>
+  <meta name="twitter:description" content="Reference for Xdp.Portal.running_under_flatpak"/>
 
 
   
@@ -82,16 +82,18 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 <div class="section">
   <h5>Type</h5>
   <div class="links">
-    <a href="struct.Parent.html">Parent</a>
+    <a href="class.Portal.html">Portal</a>
   </div>
 </div>
 <div class="section">
-  <h5>Methods</h5>
+  <h5>Functions</h5>
   <div class="links">
   
-    <a class="method" href="method.Parent.copy.html">copy</a>
+    <a class="method current" href="type_func.Portal.running_under_flatpak.html">running_under_flatpak</a>
   
-    <a class="method current" href="method.Parent.free.html">free</a>
+    <a class="method" href="type_func.Portal.running_under_sandbox.html">running_under_sandbox</a>
+  
+    <a class="method" href="type_func.Portal.running_under_snap.html">running_under_snap</a>
   
   </div>
 </div>
@@ -103,24 +105,24 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     
 <section id="main" class="content">
   <header>
-    <h3>Method</h3>
-    <h1><a href="index.html">Xdp</a><span class="sep"></span><a href="struct.Parent.html">Parent</a><span class="sep"></span>free</h1>
+    <h3>Function</h3>
+    <h1><a href="index.html">Xdp</a><span class="sep"></span><a href="class.Portal.html">Portal</a><span class="sep"></span>running_under_flatpak</h1>
   </header>
 
   <section>
     <div class="declaration toggle-wrapper">
-      <h4 style="display:flex;" id="declaration">
+      <h4 id="declaration" style="display:flex;">
         Declaration
-        <a class="anchor" href="#declaration"></a>
+        <a href="#declaration" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://flatpak.github.io/libportal/docs/libportal/parent.h#L35">[src]</a>
+        <a class="srclink" title="go to source location" href="https://flatpak.github.io/libportal/docs/libportal/portal-helpers.h#L39">[src]</a>
         
       </h4>
 
-      <div class="docblock c-decl">
-        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
-<span class="n">xdp_parent_free</span> <span class="p">(</span>
-  <span class="n">XdpParent</span><span class="o">*</span> <span class="n">parent</span>
+      <div class="docblock">
+        <pre><code><div class="highlight"><pre><span></span><span class="n">gboolean</span>
+<span class="n">xdp_portal_running_under_flatpak</span> <span class="p">(</span>
+  <span class="kt">void</span>
 <span class="p">)</span>
 </pre></div>
 </code></pre>
@@ -128,16 +130,17 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     </div>
 
     <div class="description toggle-wrapper">
-      <h4 style="display:flex;" id="description">
+      <h4 id="description" style="display:flex;">
         Description
-        <a class="anchor" href="#description"></a>
+        <a href="#description" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://flatpak.github.io/libportal/docs/libportal/parent.c#L63">[src]</a>
+        <a class="srclink" title="go to source location" href="https://flatpak.github.io/libportal/docs/libportal/portal.c#L371">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <p>Frees <code>parent</code>.</p>
+        <p>Detects if running inside of a Flatpak or WebKit&nbsp;sandbox.</p>
+<p>See also: <code>xdp_portal_running_under_sandbox()</code></p>
       </div>
 
       <div class="docblock">
@@ -154,7 +157,32 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
     
 
     
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
 
+      <div class="docblock">
+        <table class="returns">
+          <tr class="arg-name">
+            <td>Returns:</td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p><code>TRUE</code> if the current process is running under a Flatpak&nbsp;sandbox.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+        </table>
+      </div>
+    </div>
+    
   </section>
 </section>
 
