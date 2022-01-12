@@ -564,6 +564,50 @@
             </layout>
           </object>
         </child>
+        <child>
+          <object class="GtkButton" id="locationButton">
+            <property name="label">Request Location</property>
+            <signal name="clicked" handler="_requestLocation"/>
+            <layout>
+              <property name="column">1</property>
+              <property name="row">20</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Latitude:</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="row">20</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="latitudeLabel">
+            <layout>
+              <property name="column">3</property>
+              <property name="row">20</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Longitude:</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="row">21</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="longitudeLabel">
+            <layout>
+              <property name="column">3</property>
+              <property name="row">21</property>
+            </layout>
+          </object>
+        </child>
       </object>
     </child>
   </template>

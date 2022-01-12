@@ -31,6 +31,9 @@ var PortalTestWindow = GObject.registerClass({
         'ok2',
         'openLocalDir',
         'openLocalAsk',
+        'locationButton',
+        'latitudeLabel',
+        'longitudeLabel',
     ],
 }, class PortalTestWindow extends Gtk.ApplicationWindow {
     _init(application) {
@@ -607,6 +610,29 @@ var PortalTestWindow = GObject.registerClass({
             (portal, result) => {
                 try {
                     this._portal.set_wallpaper_finish(result);
+                } catch(e) {
+                    logError(e);
+                }
+            });
+    }
+
+    _requestLocation() {
+        const parent = XdpGtk4.parent_new_gtk(this);
+        this._portal.connect('location-updated', (portal, latitude, longitude) => {
+            log(`Location Updated`)
+            this._latitudeLabel.label = latitude.toString();
+            this._longitudeLabel.label = longitude.toString();
+        });
+        this._portal.location_monitor_start(
+            parent,
+            100,
+            0,
+            Xdp.LocationAccuracy.CITY,
+            Xdp.LocationMonitorFlags.NONE,
+            null,
+            (portal, result) => {
+                try {
+                    this._portal.location_monitor_start_finish(result);
                 } catch(e) {
                     logError(e);
                 }
