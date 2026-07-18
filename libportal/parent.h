@@ -26,7 +26,7 @@ G_BEGIN_DECLS
 #define XDP_TYPE_PARENT (xdp_parent_get_type ())
 
 XDP_PUBLIC
-GType xdp_parent_get_type (void) G_GNUC_CONST;
+GType xdp_parent_get_type (void);
 
 XDP_PUBLIC
 XdpParent *xdp_parent_copy (XdpParent *source);
